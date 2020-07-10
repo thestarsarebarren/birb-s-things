@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi angel</title>
+  </head>
+  <body>
+    <button onclick="sendMessage()">Send</button>
+  </body>
+
+  <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/731154932836597790/GV_88Q2z002f9jo6jD4sTzIqjFjGsHSqICdazD7JZVvmaQQCax80nZ0Gs3NEuSF6Bhpc/github");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "mistake",
+        avatar_url: "",
+        content: "angel didn't know the info category channels had publicly available webhook access so here's this, hoping this works"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
+</html>
